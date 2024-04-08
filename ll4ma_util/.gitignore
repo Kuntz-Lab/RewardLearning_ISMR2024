@@ -1,0 +1,6 @@
+
+**/*.*~
+**/__pycache__/*
+**/*.pyc
+
+src/ll4ma_util.egg-info/*

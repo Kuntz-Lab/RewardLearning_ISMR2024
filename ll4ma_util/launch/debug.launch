@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="rviz_config" default="$(find ll4ma_util)/config/debug.rviz"/>
+
+  <!-- ========================================================================================== -->
+  
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d $(arg rviz_config)"/>
+
+  <node name="debug_manip_util" pkg="ll4ma_util" type="manip_util.py" output="screen"/>
+
+  <!-- Publish a bogus TF just to get world frame in there -->
+  <node name="world_tf_publisher" pkg="tf" type="static_transform_publisher"
+        args="0 0 0 0 0 0 1 world who_cares 10"/>
+  
+</launch>

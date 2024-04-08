@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+
+  <name>ll4ma_util</name>
+  <version>0.0.0</version>
+  <description>The ll4ma_util package</description>
+  <maintainer email="adam.conkey@gmail.com">Adam Conkey</maintainer>
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rospy</build_depend>
+  <run_depend>rospy</run_depend>
+      
+  <export> </export>
+  
+</package>

@@ -1,0 +1,13 @@
+bool remove_obs
+float64 x
+float64 y
+float64 z
+float64 rot_x
+float64 rot_y
+float64 rot_z
+float64 rot_w
+#String obs_name
+#String obs_mesh_path
+---
+bool success
+

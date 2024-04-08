@@ -1,0 +1,36 @@
+# used to create the object
+# name: DvrkPush
+
+#physics_engine: ${..physics_engine}
+
+# if given, will override the device setting in gym. 
+env:
+  numEnvs: 450 #${resolve_default:512,${...num_envs}}
+  numObserivations: 11
+  numActions: 10
+  # numEnvs: 2
+  envSpacing: 3.0
+  resetDist: 3.0
+  maxEffort: 2
+  episodeLength: 30
+
+  # set to True if you use camera sensors in the environment
+  enableCameraSensors: False
+
+  asset:
+    dvrkAssetRoot: "/home/dvrk/catkin_ws/src/dvrk_env"
+    dvrkAssetFile:  "dvrk_description/psm/psm_for_issacgym_no_limits.urdf" # "dvrk_description/psm/psm_for_issacgym.urdf"  # 
+    ballAssetRoot: "/home/dvrk/catkin_ws/src/dvrk_env/shape_servo_control/src/teleoperation/random_stuff"
+    ballAssetFile: "new_ball.urdf" 
+
+control:
+  eef_vel: False
+  eef_pos: True
+  dof_vel: False
+  abs_eef_pos_action: True
+    
+
+task:
+  randomize: False
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot name="push_box_rl">
+  <link name="push_box_rl">
+    <visual>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="/home/dvrk/catkin_ws/src/dvrk_env/shape_servo_control/src/teleoperation/random_stuff/push_box.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.0 0.0 0.0"/>
+      <geometry>
+        <mesh filename="/home/dvrk/catkin_ws/src/dvrk_env/shape_servo_control/src/teleoperation/random_stuff/push_box.obj" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="700"/>
+      <inertia ixx="0.169" ixy="0.0" ixz="0.0" iyy="0.169" iyz="0.0" izz="0.169"/>
+    </inertial>
+  </link>
+</robot>
+    
+
+<!--scale="0.003 0.003 0.003"for kindney 2-->

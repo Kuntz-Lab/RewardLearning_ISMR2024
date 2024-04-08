@@ -1,0 +1,95 @@
+seed: -1
+
+clip_observations: 10000000 #5.0
+clip_actions: 1000000 #1.0 #0.1
+
+policy: # only works for MlpPolicy right now
+  pi_hid_sizes: [256, 128, 64]
+  vf_hid_sizes: [256, 128, 64]
+  activation: selu # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
+learn:
+  agent_name: point_reacher_ppo
+  test: False
+  resume: 0
+  save_interval: 100 # check for potential saves every this many iterations
+  print_log: True
+
+  # rollout params
+  max_iterations: 2000
+
+  # training params
+  cliprange: 0.1
+  ent_coef: 0
+  nsteps: 60 #32
+  noptepochs: 20 #20
+  nminibatches: 4 #50 #4 # this is per agent
+  max_grad_norm: 1
+  optim_stepsize: 3.e-4 # 3e-4 is default for single agent training with constant schedule
+  schedule: fixed # could be adaptive or linear or fixed
+  gamma: 0.99
+  lam: 0.95
+  init_noise_std: 1.0
+
+  log_interval: 1
+
+
+# seed: -1
+# policy: # only works for MlpPolicy right now
+#   pi_hid_sizes: [32, 32]
+#   vf_hid_sizes: [32, 32]
+#   activation: elu # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
+# learn:
+#   agent_name: dvrk_ppo
+#   resume: 0
+#   test: False
+#   print_log: True
+#   save_interval: 10 # check for potential saves every this many iterations
+
+#   # rollout params
+#   max_iterations: 500
+
+#   # training params
+#   cliprange: 0.2
+#   ent_coef: 0
+#   nsteps: 16
+#   noptepochs: 8
+#   nminibatches: 2 # this is per agent
+#   optim_stepsize: 3.e-4 # 3e-4 isefault for single agent training with constant schedule
+#   schedule: adaptive # could be adaptive or linear or fixed
+#   gamma: 0.99
+#   lam: 0.95
+#   init_noise_std: 1.0
+
+#   log_interval: 10
+
+
+#####################################DEBUG USING CARTPOLE#####################################
+# seed: -1
+# policy: # only works for MlpPolicy right now
+#   pi_hid_sizes: [32, 32]
+#   vf_hid_sizes: [32, 32]
+#   activation: elu # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
+# learn:
+#   agent_name: pytorch_ppo
+#   resume: 0
+#   test: False
+#   print_log: True
+#   save_interval: 10 # check for potential saves every this many iterations
+
+#   # rollout params
+#   max_iterations: 500
+
+#   # training params
+#   cliprange: 0.2
+#   ent_coef: 0
+#   nsteps: 16
+#   noptepochs: 8
+#   nminibatches: 2 # this is per agent
+#   optim_stepsize: 3.e-4 # 3e-4 isefault for single agent training with constant schedule
+#   schedule: adaptive # could be adaptive or linear or fixed
+#   gamma: 0.99
+#   lam: 0.95
+#   init_noise_std: 1.0
+
+#   log_interval: 10
+

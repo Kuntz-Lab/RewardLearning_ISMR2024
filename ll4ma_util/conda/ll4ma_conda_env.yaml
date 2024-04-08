@@ -1,0 +1,41 @@
+name: ll4ma
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - robostack
+  - robostack-experimental
+dependencies:
+  - python=3.8
+  - conda-forge::ncurses
+  - ipython
+  - jupyter
+  - tqdm
+  - matplotlib=3.5.1
+  - seaborn
+  - scikit-learn
+  - pyyaml
+  - pytorch::pytorch
+  - tensorboard
+  - pcl
+  - cmake=3.16.3
+  - ros-noetic-desktop
+  - ros-noetic-moveit
+  - ros-noetic-vision-opencv
+  - ros-noetic-perception
+  - ros-noetic-pcl-ros
+  - ros-noetic-control-toolbox  # For controllers on iiwa
+  - ros-noetic-trac-ik-kinematics-plugin  # For moveit
+  - ros-noetic-compressed-image-transport  # For building iai_kinect2
+  - ros-noetic-compressed-depth-image-transport  # For building iai_kinect2
+  - ros-noetic-realsense2-camera
+  - ros-noetic-rgbd-launch  # For ASUS camera
+  - ros-noetic-image-geometry  # For simple_aruco_detector
+  - ros-noetic-ros-numpy
+  - ros-noetic-rosfmt  # For rosmon build
+  - catkin_tools
+  - gpustat
+  - pip
+  - pip:
+    - pyquaternion
+    - urdfpy
