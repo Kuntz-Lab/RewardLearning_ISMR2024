@@ -42,8 +42,6 @@ Remember to source the workspace (source ~/catkin_ws/devel/setup.bash) before ru
 example: python train.py --task TraceCurve --logdir logs\traceCurve_learned_reward
 ```
 
-```
-
 # List of ROS Packages:
 * shape_servo_control **[maintained]**
   * Main files to launch simulations of the dVRK manipulating deformable objects
